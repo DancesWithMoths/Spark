@@ -1,17 +1,20 @@
 function igniteSpark(){
-    game.stars = game.stars + 1;
-    document.getElementById('stars').innerHTML = game.stars;
-    recalculateSparkGain();
+    if (game.sparks >= game.starsCost) {
+        game.stars = game.stars + 1;
+        game.sparks = game.sparks - game.starsCost;
+        document.getElementById('stars').innerHTML = game.stars;
+        recalculateSparkGain();
+    }
 };
 
 function incrementSparks(){
     game.sparks = game.sparks + game.sparkGain;
-    document.getElementById('spark').innerHTML = game.sparks;
+    document.getElementById('sparks').innerHTML = game.sparks;
 };
 
 function recalculateSparkGain(){
     game.sparkGain = game.stars;
-    game.starsCost = game.starsCost + 20
+    game.starsCost = (game.starsCost + 1000000);
     sparkText = ''
     switch(game.stars) {
         case 0: 

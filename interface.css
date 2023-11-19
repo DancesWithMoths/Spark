@@ -25,6 +25,10 @@
     src:url(fonts/VCR_OSD_MONO.woff) format("woff");
 } */
 
+.game-main {
+    display: flex;
+}
+
 .stage-container {
     border-style: solid;
     height: 300px;

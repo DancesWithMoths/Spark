@@ -13,14 +13,22 @@
     <div class="stage-container" id="stage-0">
       <h1 class="stage-header">Spark</h1>
       <div id="spark-text">Your world is a void.</div>
-      <button onclick="igniteSpark()">Ignite a spark <br>(Cost: <a id="starsCost">0</a>)</button>
-      <p>You have <a id="spark">0</a> sparks.</p>
+      <button onclick="igniteSpark()">Ignite a spark<br>(Cost: <a id="starsCost">0</a>)</button>
+      <p>You have <a id="sparks">0</a> sparks.</p>
+      <button onclick="formPlanet()">Form a planet<br>(Cost: <a id="planetCost">10</a>)</button>
     </div>
-    <div class="stage-container" id="stage-1">
-      <h1 class="stage-header">Stars</h1>
-      <p>You have <a id="stars">0</a> stars.</p>
+    <div class ="game-main" id="game-main">
+      <div class="stage-container" id="stage-1">
+        <h1 class="stage-header">Stars</h1>
+        <p>You have <a id="stars">0</a> stars.</p>
+      </div>
+      <div class="stage-container" id="stage-2">
+        <h1 class="stage-header">Planets</h1>
+        <p>You have <a id="stars">0</a> planets.</p>
+      </div>
     </div>
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/stage0.js"></script>
+    <script type="text/javascript" src="js/stage1.js"></script>
     </body>
 </html>
